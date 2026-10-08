@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Shafi Pharmacy | Trusted Healthcare & Wellness Store Lahore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emeraldBrand: '#059669',
+                        emeraldDark: '#064e3b',
+                        accentBlue: '#0284c7'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .brand-font { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col">
+
+    <!-- Top Bar -->
+    <div class="bg-emerald-950 text-emerald-300 text-xs py-2 px-4 text-center border-b border-emerald-900">
+        <i class="fa-solid fa-truck-fast mr-2"></i> Same-Day Emergency & Regular Delivery in Lahore | Nationwide Delivery Available (2-3 Days)
+    </div>
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-emerald-600 to-emerald-400 flex items-center justify-center shadow-lg">
+                    <i class="fa-solid fa-pills text-white text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-bold tracking-wider brand-font text-white">Al-Shafi Pharmacy</span>
+                    <span class="block text-[10px] text-emerald-400 tracking-widest uppercase font-medium">Lahore, Pakistan</span>
+                </div>
+            </a>
+
+            <div class="flex items-center space-x-4 sm:space-x-6">
+                <nav class="hidden md:flex items-center space-x-6 font-medium text-sm">
+                    <a href="#menu" class="hover:text-emerald-400 transition">Medicines</a>
+                    <a href="#guidance" class="hover:text-emerald-400 transition">Health Guide</a>
+                    <a href="#about" class="hover:text-emerald-400 transition">About Us</a>
+                    <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+                </nav>
+
+                <button onclick="toggleCart()" class="relative bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-xl font-medium text-sm flex items-center space-x-2 transition shadow-md">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="hidden sm:inline">Cart</span>
+                    <span id="cart-count" class="absolute -top-1.5 -right-1.5 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold shadow">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-slate-900 via-emerald-950 to-slate-950 py-16 sm:py-24 overflow-hidden border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 text-center">
+            <span class="inline-block bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-4 py-1.5 rounded-full border border-emerald-500/20 mb-6">
+                <i class="fa-solid fa-shield-heart mr-1.5"></i> 100% Genuine Medicines & Healthcare Products
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 brand-font">
+                Your Health, Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">Priority.</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-slate-300 text-base sm:text-lg mb-8 leading-relaxed">
+                Order authentic prescription medications, OTC drugs, vitamins, baby care essentials, and medical devices directly via WhatsApp. Fast payment options via JazzCash, EasyPaisa, or Cash on Delivery.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#menu" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-8 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
+                    Browse Medicines
+                </a>
+                <a href="https://wa.me/923034812714?text=Hello%20Al-Shafi%20Pharmacy,%20I%20want%20to%20consult%20regarding%20a%20prescription." target="_blank" class="bg-slate-800 hover:bg-slate-700 text-emerald-400 border border-emerald-500/30 font-semibold px-8 py-3.5 rounded-xl shadow-lg transition flex items-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>WhatsApp Prescription</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Notice Section -->
+    <section class="bg-slate-900 py-8 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-6 text-center md:text-left">
+            <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 flex items-center space-x-4">
+                <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 shrink-0 text-xl">
+                    <i class="fa-solid fa-motorcycle"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white text-base">Lahore Same-Day Delivery</h3>
+                    <p class="text-slate-400 text-xs mt-0.5">Quick doorstep delivery across Lahore within hours.</p>
+                </div>
+            </div>
+            <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 flex items-center space-x-4">
+                <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 shrink-0 text-xl">
+                    <i class="fa-solid fa-box-open"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white text-base">Nationwide Delivery (2-3 Days)</h3>
+                    <p class="text-slate-400 text-xs mt-0.5">Secure shipping across Pakistan via reliable couriers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Products Section -->
+    <main id="menu" class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 py-12 w-full">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4 border-b border-slate-800 pb-6">
+            <div>
+                <h2 class="text-2xl sm:text-3xl font-bold brand-font text-white">Pharmacy Catalogue</h2>
+                <p class="text-slate-400 text-sm mt-1">Select products to add to your order basket</p>
+            </div>
+            <div class="flex flex-wrap gap-2 w-full md:w-auto">
+                <button onclick="filterCategory('all')" id="cat-all" class="category-btn bg-emerald-600 text-white px-4 py-2 rounded-xl text-sm font-medium transition shadow">All Items</button>
+                <button onclick="filterCategory('medicines')" id="cat-medicines" class="category-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl text-sm font-medium transition">Medicines</button>
+                <button onclick="filterCategory('firstaid')" id="cat-firstaid" class="category-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl text-sm font-medium transition">First Aid</button>
+                <button onclick="filterCategory('vitamins')" id="cat-vitamins" class="category-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl text-sm font-medium transition">Vitamins</button>
+            </div>
+        </div>
+
+        <!-- Products Grid: 2 items per row on mobile & desktop -->
+        <div id="product-grid" class="grid grid-cols-2 gap-4 sm:gap-6">
+            <!-- Populated dynamically via JS -->
+        </div>
+    </main>
+
+    <!-- Health Guidance & Advice Section -->
+    <section id="guidance" class="bg-slate-950 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold brand-font text-white mb-3">Professional Health Guidance</h2>
+                <p class="text-slate-400 text-sm">Ensuring safe medication use and general wellness for your family.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4 text-lg">
+                        <i class="fa-solid fa-file-prescription"></i>
+                    </div>
+                    <h3 class="font-bold text-white mb-2">Prescription Verification</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Always upload a clear photo of your doctor’s prescription for restricted pharmaceutical drugs to ensure accurate dosage delivery.</p>
+                </div>
+                <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4 text-lg">
+                        <i class="fa-solid fa-temperature-low"></i>
+                    </div>
+                    <h3 class="font-bold text-white mb-2">Proper Storage</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Temperature-sensitive items like insulin and syrups are delivered in specialized cold-chain packaging to maintain full potency.</p>
+                </div>
+                <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4 text-lg">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+                    <h3 class="font-bold text-white mb-2">Dosage Timings</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Consult our visiting pharmacist on WhatsApp anytime for guidance regarding before/after meal consumption rules.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="bg-slate-900 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-emerald-400 text-xs font-semibold tracking-widest uppercase">Trusted Since 2015</span>
+                <h2 class="text-3xl font-bold brand-font text-white mt-2 mb-4">About Al-Shafi Pharmacy</h2>
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                    Al-Shafi Pharmacy is Lahore’s leading community wellness partner, dedicated to providing 100% genuine prescription drugs, surgical equipment, baby nutrition, and health supplements under expert licensed supervision.
+                </p>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    We combine doorstep convenience with verified medical authenticity. Pay safely via JazzCash/EasyPaisa account <strong class="text-emerald-400">03034812714</strong> or opt for COD.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                        <span class="block text-2xl font-bold text-emerald-400">100%</span>
+                        <span class="text-xs text-slate-400">Authentic Medicines</span>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                        <span class="block text-2xl font-bold text-emerald-400">24/7</span>
+                        <span class="text-xs text-slate-400">WhatsApp Support</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-emerald-900/40 to-slate-800 p-8 rounded-3xl border border-emerald-500/20 text-center relative">
+                <i class="fa-solid fa-hospital text-emerald-400 text-6xl mb-4"></i>
+                <h3 class="text-xl font-bold text-white mb-2">Need Urgent Medicine Assistance?</h3>
+                <p class="text-slate-300 text-xs mb-6">Send us your prescription snapshot on WhatsApp for immediate price quote and dispatch confirmation.</p>
+                <a href="https://wa.me/923034812714?text=Hello%20Al-Shafi%20Pharmacy,%20here%20is%20my%20prescription." target="_blank" class="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white font-medium px-6 py-3 rounded-xl transition shadow">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Chat on WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Slide-over Drawer -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex justify-end">
+        <div class="bg-slate-900 w-full max-w-md h-full flex flex-col border-l border-slate-800 shadow-2xl transform transition-transform">
+            <div class="p-5 border-b border-slate-800 flex items-center justify-between">
+                <h3 class="font-bold text-lg text-white flex items-center space-x-2">
+                    <i class="fa-solid fa-basket-shopping text-emerald-400"></i>
+                    <span>Your Order Basket</span>
+                </h3>
+                <button onclick="toggleCart()" class="text-slate-400 hover:text-white p-2">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            <div id="cart-items" class="flex-grow overflow-y-auto p-5 space-y-4">
+                <!-- Cart Items generated here -->
+            </div>
+            <div class="p-5 border-t border-slate-800 bg-slate-950">
+                <div class="flex justify-between font-bold text-lg text-white mb-4">
+                    <span>Total Amount:</span>
+                    <span id="cart-total" class="text-emerald-400">Rs. 0</span>
+                </div>
+                <button onclick="checkoutWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3.5 rounded-xl shadow-lg transition flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Checkout via WhatsApp</span>
+                </button>
+                <p class="text-[11px] text-center text-slate-400 mt-3">Payment via JazzCash/EasyPaisa: <strong class="text-slate-300">03034812714</strong> or Cash on Delivery</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-950 border-t border-slate-800 text-slate-400 text-xs py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="w-8 h-8 rounded-full bg-emerald-600 flex items-center justify-center text-white">
+                        <i class="fa-solid fa-pills text-sm"></i>
+                    </div>
+                    <span class="text-lg font-bold brand-font text-white">Al-Shafi Pharmacy</span>
+                </div>
+                <p class="leading-relaxed mb-4">Providing trusted healthcare, genuine prescription medicines, and emergency wellness services across Lahore and Pakistan.</p>
+                <p class="text-emerald-400 font-medium">JazzCash / EasyPaisa Account: 03034812714</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#menu" class="hover:text-emerald-400 transition">Medicines & Items</a></li>
+                    <li><a href="#guidance" class="hover:text-emerald-400 transition">Health Guidance</a></li>
+                    <li><a href="#about" class="hover:text-emerald-400 transition">About Our Pharmacy</a></li>
+                    <li><a href="#contact" class="hover:text-emerald-400 transition">Contact & Location</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Contact Info</h4>
+                <p class="mb-2"><i class="fa-solid fa-location-dot text-emerald-400 mr-2"></i> Main Boulevard, Gulberg III, Lahore, Pakistan</p>
+                <p class="mb-2"><i class="fa-solid fa-phone text-emerald-400 mr-2"></i> +92 303 4812714</p>
+                <p class="mb-2"><i class="fa-solid fa-envelope text-emerald-400 mr-2"></i> support@alshafipharmacy.pk</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-6 border-t border-slate-900 text-center">
+            <p>&copy; 2026 Al-Shafi Pharmacy & Wellness Store Lahore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        const products = [
+            { id: 1, name: "Panadol Extra (20 Tablets)", category: "medicines", price: 80, desc: "Effective relief from severe headache, fever and body pain.", img: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&auto=format&fit=crop&q=60" },
+            { id: 2, name: "Augmentin 625mg (Strip)", category: "medicines", price: 550, desc: "Broad-spectrum antibiotic for bacterial infections.", img: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400&auto=format&fit=crop&q=60" },
+            { id: 3, name: "Disprin CV (Tablets)", category: "medicines", price: 120, desc: "Blood thinner & cardiovascular health support.", img: "https://images.unsplash.com/photo-1550572017-edd951b55104?w=400&auto=format&fit=crop&q=60" },
+            { id: 4, name: "Brufen 400mg (Tablets)", category: "medicines", price: 150, desc: "Anti-inflammatory pain reliever for muscular aches.", img: "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=400&auto=format&fit=crop&q=60" },
+            { id: 5, name: "Advanced First Aid Kit", category: "firstaid", price: 1200, desc: "Complete emergency medical kit with bandages & antiseptics.", img: "https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=400&auto=format&fit=crop&q=60" },
+            { id: 6, name: "Digital Blood Pressure Monitor", category: "firstaid", price: 3500, desc: "Automatic arm blood pressure machine with digital LCD.", img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&auto=format&fit=crop&q=60" },
+            { id: 7, name: "Centrum Multivitamin (30 Tabs)", category: "vitamins", price: 2200, desc: "Complete daily multivitamin and mineral supplement.", img: "https://images.unsplash.com/photo-1577401239170-897942555fb3?w=400&auto=format&fit=crop&q=60" },
+            { id: 8, name: "Vitamin D3 2000 IU Softgels", category: "vitamins", price: 1450, desc: "Essential supplement for bone health and immunity.", img: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=400&auto=format&fit=crop&q=60" }
+        ];
+
+        let cart = [];
+
+        function renderProducts(filter = 'all') {
+            const grid = document.getElementById('product-grid');
+            const filtered = filter === 'all' ? products : products.filter(p => p.category === filter);
+            
+            grid.innerHTML = filtered.map(p => `
+                <div class="bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-700/60 shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="h-40 overflow-hidden relative bg-slate-900">
+                            <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-white text-sm sm:text-base mb-1 line-clamp-1">${p.name}</h3>
+                            <p class="text-slate-400 text-xs mb-3 line-clamp-2">${p.desc}</p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0 flex items-center justify-between">
+                        <span class="text-emerald-400 font-bold text-sm sm:text-base">Rs. ${p.price}</span>
+                        <button onclick="addToCart(${p.id})" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold px-3 py-2 rounded-xl transition shadow flex items-center space-x-1.5">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>Add</span>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterCategory(cat) {
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('bg-emerald-600', 'text-white');
+                btn.classList.add('bg-slate-800', 'text-slate-300');
+            });
+            const activeBtn = document.getElementById(`cat-${cat}`);
+            activeBtn.classList.remove('bg-slate-800', 'text-slate-300');
+            activeBtn.classList.add('bg-emerald-600', 'text-white');
+            renderProducts(cat);
+        }
+
+        function addToCart(id) {
+            const item = products.find(p => p.id === id);
+            const existing = cart.find(i => i.id === id);
+            if (existing) {
+                existing.qty++;
+            } else {
+                cart.push({ ...item, qty: 1 });
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const countElem = document.getElementById('cart-count');
+            const totalItems = cart.reduce((sum, i) => sum + i.qty, 0);
+            countElem.innerText = totalItems;
+
+            const cartItemsContainer = document.getElementById('cart-items');
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = `<p class="text-center text-slate-500 py-12 text-sm">Your order basket is empty.</p>`;
+            } else {
+                cartItemsContainer.innerHTML = cart.map(i => `
+                    <div class="flex items-center justify-between bg-slate-800 p-3 rounded-xl border border-slate-700">
+                        <div>
+                            <h4 class="font-bold text-white text-xs sm:text-sm">${i.name}</h4>
+                            <p class="text-emerald-400 text-xs">Rs. ${i.price} x ${i.qty}</p>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button onclick="changeQty(${i.id}, -1)" class="w-7 h-7 bg-slate-700 hover:bg-slate-600 rounded-lg text-white text-xs flex items-center justify-center">-</button>
+                            <span class="text-xs font-bold text-white">${i.qty}</span>
+                            <button onclick="changeQty(${i.id}, 1)" class="w-7 h-7 bg-slate-700 hover:bg-slate-600 rounded-lg text-white text-xs flex items-center justify-center">+</button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            const total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+            document.getElementById('cart-total').innerText = `Rs. ${total}`;
+        }
+
+        function changeQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (item) {
+                item.qty += delta;
+                if (item.qty <= 0) {
+                    cart = cart.filter(i => i.id !== id);
+                }
+            }
+            updateCartUI();
+        }
+
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            drawer.classList.toggle('hidden');
+        }
+
+        function checkoutWhatsApp() {
+            if (cart.length === 0) {
+                alert('Please add some items to your cart first.');
+                return;
+            }
+            let message = "*New Order - Al-Shafi Pharmacy*\n\n*Items Ordered:*\n";
+            cart.forEach(i => {
+                message += `- ${i.name} x ${i.qty} = Rs. ${i.price * i.qty}\n`;
+            });
+            const total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+            message += `\n*Total Bill:* Rs. ${total}\n`;
+            message += `\nPayment Account (JazzCash/EasyPaisa): 03034812714\nPlease confirm my delivery in Lahore.`;
+
+            const encoded = encodeURIComponent(message);
+            window.open(`https://wa.me/923034812714?text=${encoded}`, '_blank');
+        }
+
+        // Initial render
+        renderProducts();
+    </script>
+</body>
+</html>
